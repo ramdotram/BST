@@ -13,7 +13,7 @@
 using namespace std;
 #include <atlstr.h> 
 #include "CNode.h"
-#include "CBinarySearchTree.h"
+//#include "CBinarySearchTree.h"
 
 namespace krian_bst
 {
@@ -62,6 +62,7 @@ namespace krian_bst
         {
         }
 
+        void GenerateRandomTree( int nNodes );
         bool InsertNewNode( CNode* pNewNode);
         void DisplayTree(int nTypeTraversal);
         void SearchNamePrefix( char cNamePrefix );

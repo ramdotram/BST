@@ -15,7 +15,7 @@ namespace krian_bst
 
         void DisplayOptions();
         bool GetUserInput();
-        void ProcessDisplayOption( int nDisplayOption);
+        void GenerateDOT_File();
     public:
         CUserInterface();
         static CDisplay *m_pDisplay;

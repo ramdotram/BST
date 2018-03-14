@@ -17,6 +17,7 @@ namespace krian_bst
         }
         virtual void DisplayNode( CNode *pNode) = 0;
         virtual void SetMarker( char *pText ) = 0;
+        virtual ~CDisplay() { };
     };
 
 }

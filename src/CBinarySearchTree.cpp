@@ -283,4 +283,16 @@ namespace krian_bst
         m_bDisplayTree = false;
     }
 
+
+    void CBinarySearchTree::GenerateRandomTree( int nNodes )
+    {
+        CNode *pRandomNode;
+
+        for( int i = 0; i < nNodes; i++ )
+        {
+            pRandomNode = CNode::GetRandomNewNode();
+            if( NULL != pRandomNode )
+                m_pRootNode = this->InsertNode( m_pRootNode, pRandomNode );
+        }
+    }
 }

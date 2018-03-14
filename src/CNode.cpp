@@ -2,6 +2,7 @@
 #include "stdafx.h"
 #include "CNode.h"
 #include <iostream>
+#include "BstUtility.h"
 using namespace std;
 
 namespace krian_bst
@@ -40,16 +41,17 @@ CNode* CNode::GetNewNode()
 
 CNode* CNode::GetRandomNewNode()
 {
-    /*Function implementation shall be done in future*/
-#if 0
+    std::string szRandName;
     CNode *pNode = new CNode();
 
-    if( NULL == pNode )
+    if( NULL != pNode )
     {
-        printf("Memory allocation failure");
+        szRandName = randomString( 10 ); //max string is 10 characters now
+        strcpy_s( pNode->m_szName, szRandName.c_str() );
+        pNode->m_cColor = randomColor();
     }
-#endif
-    return NULL;
+
+    return pNode;
 }
 
 

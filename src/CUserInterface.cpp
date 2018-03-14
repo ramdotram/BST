@@ -5,7 +5,7 @@
 #include "CDisplay.h"
 #include "CDisplayConsole.h"
 #include "CDisplayGraphics.h"
-#include "CDisplayFile.h"
+#include "CGenerateDotFile.h"
 
 #include "CUserInterface.h"
 
@@ -32,14 +32,14 @@ namespace krian_bst
     void CUserInterface::DisplayOptions()
     {
         cout<< endl << "1 - Insert Node"<< endl;
-        cout<< "2 - Generate Tree from Config file"<< endl;
+        cout<< "2 - Generate Random Tree"<< endl;
         cout<< "3 - Display Tree - Inorder"<< endl;
         cout<< "4 - Display Tree - Preorder"<< endl;
         cout<< "5 - Display Tree - Postorder"<< endl;
         cout<< "6 - Search Node starting with character" << endl;
         cout<< "7 - Search Node with Size" << endl;
         cout<< "8 - Search node for Color Spot" << endl;
-        cout<< "9 - Selection Display Options" <<endl;
+        cout<< "9 - Generate DOT File" <<endl;
         cout<< "10 - Quit" << endl;
     }
 
@@ -60,6 +60,10 @@ namespace krian_bst
             break;
 
         case 2:
+            int nNodes;
+            cout << "Enter number of nodes for Random tree";
+            cin >> nNodes;
+            m_bst.GenerateRandomTree ( nNodes );
             break;
 
         case 3:
@@ -107,10 +111,7 @@ namespace krian_bst
 
         case 9:
             {
-                int nDisplayOption;
-                cout<<"Enter the display options 1 - Console 2 - File Output";
-                cin >> nDisplayOption;
-                ProcessDisplayOption( nDisplayOption );
+                GenerateDOT_File();
                 break;
             }
         case 10:
@@ -125,24 +126,18 @@ namespace krian_bst
     }
 
 
-    void CUserInterface::ProcessDisplayOption( int nDisplayOption)
+    void CUserInterface::GenerateDOT_File()
     {
-        if( nDisplayOption != m_pDisplay->m_DisplayMode )
-        {
-            delete m_pDisplay;
-            m_pDisplay->m_DisplayMode = nDisplayOption;
+        delete m_pDisplay;
+        m_pDisplay->m_DisplayMode = 2;
 
+        m_pDisplay = new CGenerateDotFile;
+        //do inorder traversal
+        m_bst.DisplayTree( 1 );
 
-            if( 1 == nDisplayOption )
-            {
-                m_pDisplay = new CDisplayConsole;
-            }
-            else if( 2 == nDisplayOption )
-            {
-                m_pDisplay = new CDisplayFile;
-            }
+        delete m_pDisplay;
+        m_pDisplay = new CDisplayConsole();
 
-        }
     }
 
 
@@ -156,6 +151,7 @@ namespace krian_bst
 
             if( true == bExitProgram )
             {
+                delete m_pDisplay;
                 break;
             }
 
