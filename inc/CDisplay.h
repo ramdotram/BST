@@ -4,7 +4,7 @@
 #define _CDISPLAY_H_
 
 #include "string.h"
-#include "stdafx.h"
+//#include "stdafx.h"
 
 namespace krian_bst
 {
@@ -15,6 +15,7 @@ namespace krian_bst
         CDisplay():m_DisplayMode(1) 
         {
         }
+        virtual void DisplayText( char *pText) = 0;
         virtual void DisplayNode( CNode *pNode) = 0;
         virtual void SetMarker( char *pText ) = 0;
         virtual ~CDisplay() { };

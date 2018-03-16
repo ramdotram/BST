@@ -1,5 +1,5 @@
 
-#include "stdafx.h"
+//#include "stdafx.h"
 #include <iostream>
 #include "CNode.h"
 #include "CGenerateDotFile.h"

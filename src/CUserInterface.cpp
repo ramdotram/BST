@@ -1,5 +1,5 @@
 
-#include "stdafx.h"
+////#include "stdafx.h"
 #include "CNode.h"
 #include "CBinarySearchTree.h"
 #include "CDisplay.h"
@@ -29,6 +29,9 @@ namespace krian_bst
             m_pDisplay->DisplayNode( pNode );
     }
 
+    void CUserInterface::DisplayText( char*pName )
+    {
+    }
     void CUserInterface::DisplayOptions()
     {
         cout<< endl << "1 - Insert Node"<< endl;
@@ -111,7 +114,7 @@ namespace krian_bst
 
         case 9:
             {
-                GenerateDOT_File();
+                GenerateDOT_File(&m_bst);
                 break;
             }
         case 10:
@@ -126,14 +129,14 @@ namespace krian_bst
     }
 
 
-    void CUserInterface::GenerateDOT_File()
+    void CUserInterface::GenerateDOT_File( CBinarySearchTree *pTree)
     {
         delete m_pDisplay;
-        m_pDisplay->m_DisplayMode = 2;
+        //m_pDisplay->m_DisplayMode = 2;
 
         m_pDisplay = new CGenerateDotFile;
         //do inorder traversal
-        m_bst.DisplayTree( 1 );
+        pTree->DisplayTree( 1 );
 
         delete m_pDisplay;
         m_pDisplay = new CDisplayConsole();

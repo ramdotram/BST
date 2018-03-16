@@ -4,7 +4,7 @@
 #define _CDISPLAY_GRAPHICS_H_
 
 #include "string.h"
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "CDisplay.h"
 #include "CNode.h"
 

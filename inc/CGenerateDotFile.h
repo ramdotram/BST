@@ -3,7 +3,7 @@
 #ifndef _CGENERATE_DOT_FILE_H_
 #define _CGENERATE_DOT_FILE_H_
 
-#include "stdafx.h"
+//#include "stdafx.h"
 #include <iostream>
 #include <fstream>
 #include "string.h"
@@ -21,6 +21,10 @@ namespace krian_bst
         void DisplayColor( CNode *pNode);
     public:
         CGenerateDotFile();
+        virtual void DisplayText( char *pText )
+        {
+            //do nothing
+        }
         virtual void DisplayNode( CNode *pNode);
         virtual void SetMarker( char *pText );
         virtual ~CGenerateDotFile();

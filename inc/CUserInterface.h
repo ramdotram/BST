@@ -15,13 +15,13 @@ namespace krian_bst
 
         void DisplayOptions();
         bool GetUserInput();
-        void GenerateDOT_File();
     public:
         CUserInterface();
         static CDisplay *m_pDisplay;
         void Process();
-        static void DisplayNode( CNode *pnode );
-
+        static void DisplayNode( CNode *pNode );
+        static void DisplayText( char*pName );
+        void GenerateDOT_File( CBinarySearchTree *pTree);
     };
 
 }

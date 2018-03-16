@@ -1,5 +1,5 @@
 
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "string.h"
 #include "CBinarySearchTree.h"
 #include <iostream>
@@ -14,7 +14,7 @@ namespace krian_bst
         {
             if(pNode == NULL)
             {
-                /*Root node empty case*/
+                m_TotalNodes++;
                 pNode = pNewNode;
                 pNode->m_pLeftBranch = pNode->m_pRightBranch = NULL;
             }
@@ -55,6 +55,7 @@ namespace krian_bst
 
         DeleteTree(pNode->m_pLeftBranch);
         DeleteTree(pNode->m_pRightBranch);
+        m_TotalNodes--;
         delete pNode;
 
         return NULL;
@@ -110,25 +111,35 @@ namespace krian_bst
 
     void CBinarySearchTree::CheckSearchCriteria()
     {
-        if( 0 != m_CurrentSearchColor )
+        if( 0 != m_SearchColor )
         {
-            CheckColorSpots();
-        }
+            if( 'a' == m_SearchColor )
+            {
+                CheckAllColorSpot();
+            }
+            else
+            {
+                CheckColorSpot();
+            }
 
-        if( 0 != m_cNameSearchPrefix )
+        }
+        else if( 0 != m_cNameSearchPrefix )
         {
             CheckNamePrefix();
         }
-
-        if( 0 != m_nSearchSize )
+        else if( 0 != m_nSearchSize )
         {
-
+            if( m_pCurrentNode->GetSize() > m_nSearchSize )
+            {
+                m_NameSearchList.push_back( CString( m_pCurrentNode->GetName() ) );
+            }
         }
 
         if( true == m_bDisplayTree )
         {
             //m_pCurrentNode->Display();
-            CUserInterface::m_pDisplay->DisplayNode(m_pCurrentNode); 
+            CUserInterface::m_pDisplay->DisplayNode(m_pCurrentNode);
+            CUserInterface::m_pDisplay->DisplayText(m_pCurrentNode->GetName()); 
         }
     }
 
@@ -160,11 +171,12 @@ namespace krian_bst
     {
         CString myString;
 
-        cout << "\n Display Color Spot start " << m_CurrentSearchColor;
+        //cout << "\n Display Color Spot start " << m_CurrentSearchColor;
         for( unsigned int i = 0; i < m_ColorSpotList.size(); i++)
         {
             myString = m_ColorSpotList[i];
-            cout << "Node"<< (char*) myString.GetString()<<endl;
+            //cout << "Node"<< (char*) myString.GetString()<<endl;
+            CUserInterface::m_pDisplay->DisplayText( (char*) myString.GetString() );
         }
 
         cout<<"\nDisplay Color Spot end";
@@ -184,13 +196,14 @@ namespace krian_bst
     }
 
 
-    void CBinarySearchTree::CheckColorSpots()
+    void CBinarySearchTree::CheckAllColorSpot()
     {
         if( m_CurrentSearchColor != m_pCurrentNode->GetColor() )
         {
             if( m_ColorSpotList.size() >= 3 )
             {
                 DisplayColorSpot();
+                m_nColorSpotCount++;
             }
             m_CurrentSearchColor = m_pCurrentNode->GetColor();
             m_ColorSpotList.clear();
@@ -199,7 +212,23 @@ namespace krian_bst
         m_ColorSpotList.push_back( CString(m_pCurrentNode->GetName()) );
     }
 
+    void CBinarySearchTree::CheckColorSpot()
+    {
+        if( m_SearchColor == m_pCurrentNode->GetColor() )
+        {
+            m_ColorSpotList.push_back( CString(m_pCurrentNode->GetName()) );
 
+            if( m_ColorSpotList.size() >= 3 )
+            {
+                DisplayColorSpot();
+                m_nColorSpotCount++;
+            }
+        }
+        else
+        {
+            m_ColorSpotList.clear();
+        }       
+    }
 
     bool CBinarySearchTree::InsertNewNode( CNode *pNewNode)
     {
@@ -242,7 +271,7 @@ namespace krian_bst
     }
 
 
-    void CBinarySearchTree::SearchNamePrefix( char cNamePrefix )
+    int CBinarySearchTree::SearchNamePrefix( char cNamePrefix )
     {
         ResetSearches();
         m_NameSearchList.clear();
@@ -251,9 +280,11 @@ namespace krian_bst
 
         cout << endl << "Display name starting with character " << m_cNameSearchPrefix<<endl;
         DisplayNames();
+
+        return m_NameSearchList.size();
     }
 
-    void CBinarySearchTree::SearchSize( int nSize )
+    int CBinarySearchTree::SearchSize( int nSize )
     {
         ResetSearches();
         m_NameSearchList.clear();
@@ -264,35 +295,70 @@ namespace krian_bst
 
         cout << endl << "Display name pNode size greater than " << nSize<<endl;
         DisplayNames();
+
+        return m_NameSearchList.size();
     }
 
-    void CBinarySearchTree::SearchColorSpots( char cColor )
+    int CBinarySearchTree::SearchColorSpots( char cColor )
     {
         ResetSearches();
+        m_nColorSpotCount = 0;
         m_ColorSpotList.clear();
-        m_CurrentSearchColor = cColor;
-        TraversePreOrder(m_pRootNode );
-        DisplayColorSpot();
+        m_SearchColor = cColor;
+        TraverseInOrder(m_pRootNode );
+
+        if( 'a' == cColor )
+        {
+            if( m_ColorSpotList.size() >= 3 )
+            {
+                DisplayColorSpot();
+                m_nColorSpotCount++;
+            }
+        }
+
+        return m_nColorSpotCount;
     }
+
 
     void CBinarySearchTree::ResetSearches()
     {
         m_cNameSearchPrefix = 0;
-        m_CurrentSearchColor = 0;
+        m_SearchColor = 0;
         m_nSearchSize = 0;
         m_bDisplayTree = false;
+        m_nColorSpotCount = 0;
     }
 
 
-    void CBinarySearchTree::GenerateRandomTree( int nNodes )
+    int CBinarySearchTree::GenerateRandomTree( int nNodes )
     {
         CNode *pRandomNode;
 
-        for( int i = 0; i < nNodes; i++ )
+        for( int i = 0; m_TotalNodes < nNodes; i++ )
         {
             pRandomNode = CNode::GetRandomNewNode();
             if( NULL != pRandomNode )
                 m_pRootNode = this->InsertNode( m_pRootNode, pRandomNode );
+
         }
+
+        return m_pRootNode->GetSize();
+    }
+
+    bool CBinarySearchTree::DeleteTree()
+    {
+        bool bRetVal = false;
+
+        if( NULL != m_pRootNode )
+        {
+            DeleteTree( m_pRootNode );
+        }
+
+        return bRetVal;
+    }
+
+    int CBinarySearchTree::GetTotalNodes()
+    {
+        return m_TotalNodes;
     }
 }

@@ -4,7 +4,7 @@
 #define _CDISPLAY_CONSOLE_H_
 
 #include "string.h"
-#include "stdafx.h"
+//#include "stdafx.h"
 #include <iostream>
 #include "CDisplay.h"
 #include "CNode.h"
@@ -14,6 +14,11 @@ namespace krian_bst
     class CDisplayConsole: public CDisplay
     {
     public:
+
+        virtual void DisplayText( char *pText )
+        {
+            cout << endl << "------------Node Name" << pText;
+        }
         virtual void DisplayNode( CNode *pNode)
         {
             cout << endl << "Node Name" << pNode->GetName();

@@ -1,0 +1,555 @@
+[==========] Running 21 tests from 21 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from testInsertNode_BasicFunction
+[ RUN      ] testInsertNode_BasicFunction.UT_BST
+[       OK ] testInsertNode_BasicFunction.UT_BST (0 ms)
+[----------] 1 test from testInsertNode_BasicFunction (0 ms total)
+
+[----------] 1 test from testInsertNode_NegativeCase
+[ RUN      ] testInsertNode_NegativeCase.UT_BST
+[       OK ] testInsertNode_NegativeCase.UT_BST (0 ms)
+[----------] 1 test from testInsertNode_NegativeCase (0 ms total)
+
+[----------] 1 test from testInsertNode_DuplicateCase
+[ RUN      ] testInsertNode_DuplicateCase.UT_BST
+[       OK ] testInsertNode_DuplicateCase.UT_BST (0 ms)
+[----------] 1 test from testInsertNode_DuplicateCase (0 ms total)
+
+[----------] 1 test from testSearchNamePrefix_Basic
+[ RUN      ] testSearchNamePrefix_Basic.UT_BST
+
+Display name starting with character a
+Nodeadam
+Nodearun
+Display name starting with character ends
+
+Display name starting with character b
+Nodebabu
+Nodebanu
+Display name starting with character ends
+
+Display name starting with character x
+Display name starting with character ends
+[       OK ] testSearchNamePrefix_Basic.UT_BST (10 ms)
+[----------] 1 test from testSearchNamePrefix_Basic (10 ms total)
+
+[----------] 1 test from testSearchSize_Basic
+[ RUN      ] testSearchSize_Basic.UT_BST
+
+Display name pNode size greater than 5
+Nodenode1
+Nodenode2
+Nodenode3
+Nodenode4
+Display name starting with character ends
+[       OK ] testSearchSize_Basic.UT_BST (10 ms)
+[----------] 1 test from testSearchSize_Basic (10 ms total)
+
+[----------] 1 test from testSearchColorSpot_Test1
+[ RUN      ] testSearchColorSpot_Test1.UT_BST
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D40 pointing to "node1")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D20 pointing to "node2")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D00 pointing to "node3")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+Display Color Spot end
+Display Color Spot end[       OK ] testSearchColorSpot_Test1.UT_BST (100 ms)
+[----------] 1 test from testSearchColorSpot_Test1 (100 ms total)
+
+[----------] 1 test from testSearchColorSpot_Test2
+[ RUN      ] testSearchColorSpot_Test2.UT_BST
+[       OK ] testSearchColorSpot_Test2.UT_BST (0 ms)
+[----------] 1 test from testSearchColorSpot_Test2 (0 ms total)
+
+[----------] 1 test from testSearchColorSpot_Test3
+[ RUN      ] testSearchColorSpot_Test3.UT_BST
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D40 pointing to "b1")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D20 pointing to "b2")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D00 pointing to "b3")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+Display Color Spot end
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D00 pointing to "a1")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D20 pointing to "a2")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D40 pointing to "a3")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+Display Color Spot end
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D40 pointing to "c1")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D20 pointing to "c2")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D00 pointing to "c3")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+Display Color Spot end[       OK ] testSearchColorSpot_Test3.UT_BST (330 ms)
+[----------] 1 test from testSearchColorSpot_Test3 (330 ms total)
+
+[----------] 1 test from testSearchColorSpot_Test5
+[ RUN      ] testSearchColorSpot_Test5.UT_BST
+[       OK ] testSearchColorSpot_Test5.UT_BST (0 ms)
+[----------] 1 test from testSearchColorSpot_Test5 (10 ms total)
+
+[----------] 1 test from testSearchColorSpot_Test6
+[ RUN      ] testSearchColorSpot_Test6.UT_BST
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D20 pointing to "a1")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D00 pointing to "a2")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D40 pointing to "a3")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+Display Color Spot end
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D40 pointing to "b1")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D00 pointing to "b2")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D20 pointing to "b3")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+Display Color Spot end
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D20 pointing to "c1")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D00 pointing to "c2")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D40 pointing to "c3")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+Display Color Spot end[       OK ] testSearchColorSpot_Test6.UT_BST (330 ms)
+[----------] 1 test from testSearchColorSpot_Test6 (330 ms total)
+
+[----------] 1 test from testTotalNode_Test1
+[ RUN      ] testTotalNode_Test1.UT_BST
+[       OK ] testTotalNode_Test1.UT_BST (0 ms)
+[----------] 1 test from testTotalNode_Test1 (10 ms total)
+
+[----------] 1 test from testTotalNode_DuplicateCase
+[ RUN      ] testTotalNode_DuplicateCase.UT_BST
+[       OK ] testTotalNode_DuplicateCase.UT_BST (0 ms)
+[----------] 1 test from testTotalNode_DuplicateCase (10 ms total)
+
+[----------] 1 test from testTotalNode_Test3
+[ RUN      ] testTotalNode_Test3.UT_BST
+[       OK ] testTotalNode_Test3.UT_BST (0 ms)
+[----------] 1 test from testTotalNode_Test3 (0 ms total)
+
+[----------] 1 test from testDeleteTree_Empty
+[ RUN      ] testDeleteTree_Empty.UT_BST
+[       OK ] testDeleteTree_Empty.UT_BST (0 ms)
+[----------] 1 test from testDeleteTree_Empty (0 ms total)
+
+[----------] 1 test from GenerateRandomTree
+[ RUN      ] GenerateRandomTree.UT_BST
+[       OK ] GenerateRandomTree.UT_BST (0 ms)
+[----------] 1 test from GenerateRandomTree (10 ms total)
+
+[----------] 1 test from GenerateRandomTree_LargeSize
+[ RUN      ] GenerateRandomTree_LargeSize.UT_BST
+[       OK ] GenerateRandomTree_LargeSize.UT_BST (20 ms)
+[----------] 1 test from GenerateRandomTree_LargeSize (30 ms total)
+
+[----------] 1 test from DisplayTree_Inorder
+[ RUN      ] DisplayTree_Inorder.UT_BST
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayNode(00742AE0)
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+unknown file: error:
+Unexpected mock function call - returning directly.
+    Function call: DisplayText(00742AE0 pointing to "a")
+Google Mock tried the following 3 expectations, but none matched:
+
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(432): tried expectation #0: EXPECT_CALL(myDisplay, DisplayText("a"))...
+  Expected arg #0: is equal to 0119ACE8 pointing to "a"
+           Actual: 00742AE0 pointing to "a"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(433): tried expectation #1: EXPECT_CALL(myDisplay, DisplayText("b"))...
+  Expected arg #0: is equal to 0119ACEC pointing to "b"
+           Actual: 00742AE0 pointing to "a"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(434): tried expectation #2: EXPECT_CALL(myDisplay, DisplayText("c"))...
+  Expected arg #0: is equal to 0119ACE4 pointing to "c"
+           Actual: 00742AE0 pointing to "a"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayNode(00741C40)
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+unknown file: error:
+Unexpected mock function call - returning directly.
+    Function call: DisplayText(00741C40 pointing to "b")
+Google Mock tried the following 3 expectations, but none matched:
+
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(432): tried expectation #0: EXPECT_CALL(myDisplay, DisplayText("a"))...
+  Expected arg #0: is equal to 0119ACE8 pointing to "a"
+           Actual: 00741C40 pointing to "b"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(433): tried expectation #1: EXPECT_CALL(myDisplay, DisplayText("b"))...
+  Expected arg #0: is equal to 0119ACEC pointing to "b"
+           Actual: 00741C40 pointing to "b"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(434): tried expectation #2: EXPECT_CALL(myDisplay, DisplayText("c"))...
+  Expected arg #0: is equal to 0119ACE4 pointing to "c"
+           Actual: 00741C40 pointing to "b"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayNode(00742D50)
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+unknown file: error:
+Unexpected mock function call - returning directly.
+    Function call: DisplayText(00742D50 pointing to "c")
+Google Mock tried the following 3 expectations, but none matched:
+
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(432): tried expectation #0: EXPECT_CALL(myDisplay, DisplayText("a"))...
+  Expected arg #0: is equal to 0119ACE8 pointing to "a"
+           Actual: 00742D50 pointing to "c"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(433): tried expectation #1: EXPECT_CALL(myDisplay, DisplayText("b"))...
+  Expected arg #0: is equal to 0119ACEC pointing to "b"
+           Actual: 00742D50 pointing to "c"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(434): tried expectation #2: EXPECT_CALL(myDisplay, DisplayText("c"))...
+  Expected arg #0: is equal to 0119ACE4 pointing to "c"
+           Actual: 00742D50 pointing to "c"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(432): error: Actual function call count doesn't match EXPECT_CALL(myDisplay, DisplayText("a"))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(433): error: Actual function call count doesn't match EXPECT_CALL(myDisplay, DisplayText("b"))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(434): error: Actual function call count doesn't match EXPECT_CALL(myDisplay, DisplayText("c"))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+[  FAILED  ] DisplayTree_Inorder.UT_BST (160 ms)
+[----------] 1 test from DisplayTree_Inorder (170 ms total)
+
+[----------] 1 test from DisplayTree_Preorder
+[ RUN      ] DisplayTree_Preorder.UT_BST
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayNode(00741C40)
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+unknown file: error:
+Unexpected mock function call - returning directly.
+    Function call: DisplayText(00741C40 pointing to "b")
+Google Mock tried the following 3 expectations, but none matched:
+
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(465): tried expectation #0: EXPECT_CALL(myDisplay, DisplayText("b"))...
+  Expected arg #0: is equal to 0119ACEC pointing to "b"
+           Actual: 00741C40 pointing to "b"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(466): tried expectation #1: EXPECT_CALL(myDisplay, DisplayText("a"))...
+  Expected arg #0: is equal to 0119ACE8 pointing to "a"
+           Actual: 00741C40 pointing to "b"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(467): tried expectation #2: EXPECT_CALL(myDisplay, DisplayText("c"))...
+  Expected arg #0: is equal to 0119ACE4 pointing to "c"
+           Actual: 00741C40 pointing to "b"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayNode(00742D50)
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+unknown file: error:
+Unexpected mock function call - returning directly.
+    Function call: DisplayText(00742D50 pointing to "a")
+Google Mock tried the following 3 expectations, but none matched:
+
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(465): tried expectation #0: EXPECT_CALL(myDisplay, DisplayText("b"))...
+  Expected arg #0: is equal to 0119ACEC pointing to "b"
+           Actual: 00742D50 pointing to "a"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(466): tried expectation #1: EXPECT_CALL(myDisplay, DisplayText("a"))...
+  Expected arg #0: is equal to 0119ACE8 pointing to "a"
+           Actual: 00742D50 pointing to "a"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(467): tried expectation #2: EXPECT_CALL(myDisplay, DisplayText("c"))...
+  Expected arg #0: is equal to 0119ACE4 pointing to "c"
+           Actual: 00742D50 pointing to "a"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayNode(00742AE0)
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+unknown file: error:
+Unexpected mock function call - returning directly.
+    Function call: DisplayText(00742AE0 pointing to "c")
+Google Mock tried the following 3 expectations, but none matched:
+
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(465): tried expectation #0: EXPECT_CALL(myDisplay, DisplayText("b"))...
+  Expected arg #0: is equal to 0119ACEC pointing to "b"
+           Actual: 00742AE0 pointing to "c"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(466): tried expectation #1: EXPECT_CALL(myDisplay, DisplayText("a"))...
+  Expected arg #0: is equal to 0119ACE8 pointing to "a"
+           Actual: 00742AE0 pointing to "c"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(467): tried expectation #2: EXPECT_CALL(myDisplay, DisplayText("c"))...
+  Expected arg #0: is equal to 0119ACE4 pointing to "c"
+           Actual: 00742AE0 pointing to "c"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(465): error: Actual function call count doesn't match EXPECT_CALL(myDisplay, DisplayText("b"))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(466): error: Actual function call count doesn't match EXPECT_CALL(myDisplay, DisplayText("a"))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(467): error: Actual function call count doesn't match EXPECT_CALL(myDisplay, DisplayText("c"))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+[  FAILED  ] DisplayTree_Preorder.UT_BST (170 ms)
+[----------] 1 test from DisplayTree_Preorder (170 ms total)
+
+[----------] 1 test from DisplayTree_Postorder
+[ RUN      ] DisplayTree_Postorder.UT_BST
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayNode(00742AE0)
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+unknown file: error:
+Unexpected mock function call - returning directly.
+    Function call: DisplayText(00742AE0 pointing to "a")
+Google Mock tried the following 3 expectations, but none matched:
+
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(499): tried expectation #0: EXPECT_CALL(myDisplay, DisplayText("c"))...
+  Expected arg #0: is equal to 0119ACE4 pointing to "c"
+           Actual: 00742AE0 pointing to "a"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(500): tried expectation #1: EXPECT_CALL(myDisplay, DisplayText("a"))...
+  Expected arg #0: is equal to 0119ACE8 pointing to "a"
+           Actual: 00742AE0 pointing to "a"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(501): tried expectation #2: EXPECT_CALL(myDisplay, DisplayText("b"))...
+  Expected arg #0: is equal to 0119ACEC pointing to "b"
+           Actual: 00742AE0 pointing to "a"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayNode(00742D50)
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+unknown file: error:
+Unexpected mock function call - returning directly.
+    Function call: DisplayText(00742D50 pointing to "c")
+Google Mock tried the following 3 expectations, but none matched:
+
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(499): tried expectation #0: EXPECT_CALL(myDisplay, DisplayText("c"))...
+  Expected arg #0: is equal to 0119ACE4 pointing to "c"
+           Actual: 00742D50 pointing to "c"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(500): tried expectation #1: EXPECT_CALL(myDisplay, DisplayText("a"))...
+  Expected arg #0: is equal to 0119ACE8 pointing to "a"
+           Actual: 00742D50 pointing to "c"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(501): tried expectation #2: EXPECT_CALL(myDisplay, DisplayText("b"))...
+  Expected arg #0: is equal to 0119ACEC pointing to "b"
+           Actual: 00742D50 pointing to "c"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayNode(00741C40)
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+unknown file: error:
+Unexpected mock function call - returning directly.
+    Function call: DisplayText(00741C40 pointing to "b")
+Google Mock tried the following 3 expectations, but none matched:
+
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(499): tried expectation #0: EXPECT_CALL(myDisplay, DisplayText("c"))...
+  Expected arg #0: is equal to 0119ACE4 pointing to "c"
+           Actual: 00741C40 pointing to "b"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(500): tried expectation #1: EXPECT_CALL(myDisplay, DisplayText("a"))...
+  Expected arg #0: is equal to 0119ACE8 pointing to "a"
+           Actual: 00741C40 pointing to "b"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(501): tried expectation #2: EXPECT_CALL(myDisplay, DisplayText("b"))...
+  Expected arg #0: is equal to 0119ACEC pointing to "b"
+           Actual: 00741C40 pointing to "b"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(499): error: Actual function call count doesn't match EXPECT_CALL(myDisplay, DisplayText("c"))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(500): error: Actual function call count doesn't match EXPECT_CALL(myDisplay, DisplayText("a"))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(501): error: Actual function call count doesn't match EXPECT_CALL(myDisplay, DisplayText("b"))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+[  FAILED  ] DisplayTree_Postorder.UT_BST (160 ms)
+[----------] 1 test from DisplayTree_Postorder (160 ms total)
+
+[----------] 1 test from testDeleteTree
+[ RUN      ] testDeleteTree.UT_BST
+unknown file: error: SEH exception with code 0xc0000005 thrown in the test body.
+[  FAILED  ] testDeleteTree.UT_BST (0 ms)
+[----------] 1 test from testDeleteTree (10 ms total)
+
+[----------] 1 test from testSearchColorSpot_Basic2
+[ RUN      ] testSearchColorSpot_Basic2.UT_BST
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D40 pointing to "adri")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D00 pointing to "bob")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+GMOCK WARNING:
+Uninteresting mock function call - returning directly.
+    Function call: DisplayText(004D5D20 pointing to "devi")
+NOTE: You can safely ignore the above warning unless this call should not happen.  Do not suppress it by blindly adding an EXPECT_CALL() if you don't mean to enforce the call.  See https://github.com/google/googletest/blob/master/googlemock/docs/CookBook.md#knowing-when-to-expect for details.
+
+Display Color Spot endunknown file: error:
+Unexpected mock function call - returning directly.
+    Function call: DisplayText(004D5D20 pointing to "adri")
+Google Mock tried the following 1 expectation, but it didn't match:
+
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(550): EXPECT_CALL(myDisplay, DisplayText("ram"))...
+  Expected arg #0: is equal to 0119AAF4 pointing to "ram"
+           Actual: 004D5D20 pointing to "adri"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+unknown file: error:
+Unexpected mock function call - returning directly.
+    Function call: DisplayText(004D5D00 pointing to "bob")
+Google Mock tried the following 1 expectation, but it didn't match:
+
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(550): EXPECT_CALL(myDisplay, DisplayText("ram"))...
+  Expected arg #0: is equal to 0119AAF4 pointing to "ram"
+           Actual: 004D5D00 pointing to "bob"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+unknown file: error:
+Unexpected mock function call - returning directly.
+    Function call: DisplayText(004D5D40 pointing to "devi")
+Google Mock tried the following 1 expectation, but it didn't match:
+
+c:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(550): EXPECT_CALL(myDisplay, DisplayText("ram"))...
+  Expected arg #0: is equal to 0119AAF4 pointing to "ram"
+           Actual: 004D5D40 pointing to "devi"
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+
+Display Color Spot endc:\users\rrm4cob\documents\visual studio 2010\projects\bst\bst\test\unittestbst.cpp(550): error: Actual function call count doesn't match EXPECT_CALL(myDisplay, DisplayText("ram"))...
+         Expected: to be called once
+           Actual: never called - unsatisfied and active
+[  FAILED  ] testSearchColorSpot_Basic2.UT_BST (150 ms)
+[----------] 1 test from testSearchColorSpot_Basic2 (150 ms total)
+
+[----------] Global test environment tear-down
+[==========] 21 tests from 21 test cases ran. (1600 ms total)
+[  PASSED  ] 16 tests.
+[  FAILED  ] 5 tests, listed below:
+[  FAILED  ] DisplayTree_Inorder.UT_BST
+[  FAILED  ] DisplayTree_Preorder.UT_BST
+[  FAILED  ] DisplayTree_Postorder.UT_BST
+[  FAILED  ] testDeleteTree.UT_BST
+[  FAILED  ] testSearchColorSpot_Basic2.UT_BST
+
+ 5 FAILED TESTS
+Press any key to continue . . .

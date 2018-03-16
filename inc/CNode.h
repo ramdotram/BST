@@ -2,7 +2,7 @@
 #ifndef _CNODE_H_
 #define _CNODE_H_
 
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "string.h"
 
 namespace krian_bst
@@ -20,22 +20,24 @@ namespace krian_bst
         CNode();
 
     public:
+        CNode(char*, char);
         CNode* m_pLeftBranch;
         CNode* m_pRightBranch;
 
         static CNode* GetNewNode();
         static CNode* GetRandomNewNode();
 
-        int GetSize();
-        void SetSize( int size );
+         int GetSize();
+         void SetSize( int size );
 
-        char* GetName();
-        char GetColor();
-        void Display();
+         char* GetName();
+         char GetColor();
+         void Display();
 
-        bool operator < (CNode);
-        bool operator > (CNode);
-        void operator = (CNode);
+         bool operator < (CNode);
+         bool operator > (CNode);
+         void operator = (CNode);
+
     };
 
 }
