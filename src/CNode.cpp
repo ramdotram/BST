@@ -1,14 +1,20 @@
 
 //#include "stdafx.h"
-#include "CNode.h"
 #include <iostream>
 #include "BstUtility.h"
+#include <cstring>
+#include <algorithm>    // std::sort
+ 
+#include <vector>
 using namespace std;
+#include <atlstr.h> 
+#include "CNode.h"
+
 
 namespace krian_bst
 {
 
-    CNode::CNode(char *pName, char cColor): m_nSize(1)
+    CNode::CNode(char *pName, char cColor): m_nSize(1), m_unNodeID(1)
     {
          strcpy_s( m_szName, pName );
          m_cColor = cColor;
@@ -16,7 +22,7 @@ namespace krian_bst
 
     CNode::CNode():
     m_cColor('b'), m_nSize(1),
-        m_pLeftBranch(NULL), m_pRightBranch(NULL)
+        m_pLeftBranch(NULL), m_pRightBranch(NULL), m_unNodeID(1)
     {
         strcpy_s( m_szName, "");
     }
@@ -125,6 +131,48 @@ namespace krian_bst
         //no change in size
 
         return;
+    }
+
+    bool CNode::SetNodeID( unsigned int unNodeID )
+    {
+        m_unNodeID = unNodeID;
+        m_AdjacentColorsNodeIDs.push_back( m_unNodeID );
+        m_AdjacentColorsNodeNames.push_back( m_szName );
+
+        return true;
+    }
+
+    unsigned int CNode::GetNodeID( )
+    {
+        return m_unNodeID;
+    }
+
+    void CNode::UpdateAdjacentColorNodes( )
+    {
+        CNode *ptr;
+        m_AdjacentColorsNodeIDs.clear();
+        m_AdjacentColorsNodeIDs.push_back( m_unNodeID );
+        m_AdjacentColorsNodeNames.clear();
+        m_AdjacentColorsNodeNames.push_back( m_szName );
+        if( m_pLeftBranch )
+        {
+            if( m_cColor == m_pLeftBranch->GetColor() )
+            {
+                m_AdjacentColorsNodeIDs.insert( m_AdjacentColorsNodeIDs.end(), m_pLeftBranch->m_AdjacentColorsNodeIDs.begin(), m_pLeftBranch->m_AdjacentColorsNodeIDs.end() );
+                std::sort( m_AdjacentColorsNodeIDs.begin(), m_AdjacentColorsNodeIDs.end() );
+                m_AdjacentColorsNodeNames.insert( m_AdjacentColorsNodeNames.end(), m_pLeftBranch->m_AdjacentColorsNodeNames.begin(), m_pLeftBranch->m_AdjacentColorsNodeNames.end() );
+            }
+        }
+
+        if( m_pRightBranch )
+        {
+            if( m_cColor == m_pRightBranch->GetColor() )
+            {
+                m_AdjacentColorsNodeIDs.insert( m_AdjacentColorsNodeIDs.end(), m_pRightBranch->m_AdjacentColorsNodeIDs.begin(), m_pRightBranch->m_AdjacentColorsNodeIDs.end() );
+                std::sort( m_AdjacentColorsNodeIDs.begin(), m_AdjacentColorsNodeIDs.end() );
+                m_AdjacentColorsNodeNames.insert( m_AdjacentColorsNodeNames.end(), m_pRightBranch->m_AdjacentColorsNodeNames.begin(), m_pRightBranch->m_AdjacentColorsNodeNames.end() );
+            }
+        }
     }
 
 }

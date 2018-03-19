@@ -14,6 +14,7 @@ using namespace std;
 #include <atlstr.h> 
 #include "CNode.h"
 //#include "CBinarySearchTree.h"
+#include "CColorSpotController.h"
 
 namespace krian_bst
 {
@@ -23,15 +24,15 @@ namespace krian_bst
         CNode *m_pRootNode;
         CNode *m_pCurrentNode;
         char  m_cNameSearchPrefix;
-        int   m_TotalNodes;
+        unsigned int   m_unTotalNodes;
         int   m_nSearchSize;
         int   m_nColorSpotCount;
         char  m_SearchColor;
         char  m_CurrentSearchColor;
         bool  m_bDisplayTree;
 
-        std::vector<CString> m_ColorSpotList;
         std::vector<CString> m_NameSearchList;
+        CColorSpotController m_ColorSpotController;
 
         CNode* DeleteTree(CNode* pNode);
         CNode* InsertNode(CNode* pNode, CNode* pNewNode);
@@ -42,7 +43,7 @@ namespace krian_bst
 
         void CheckSearchCriteria();
         void CheckAllColorSpot();
-        void CheckColorSpot();
+        //void CheckColorSpot();
         void CheckNamePrefix();
         void CheckSize();
 
@@ -52,7 +53,7 @@ namespace krian_bst
 
     public:
         CBinarySearchTree():m_pRootNode(NULL), m_CurrentSearchColor(0), m_nColorSpotCount(0),
-            m_cNameSearchPrefix(0), m_nSearchSize(0), m_bDisplayTree(false), m_TotalNodes(0),
+            m_cNameSearchPrefix(0), m_nSearchSize(0), m_bDisplayTree(false), m_unTotalNodes(0),
             m_SearchColor(0)
         {
 
